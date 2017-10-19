@@ -5,12 +5,8 @@ function main {
   source "$shome/script/profile"
 
   case "${DISTRIB_ID}" in
-    Darwin)
-      brew install bitlbee
-      ;;
-    Ubuntu|Amazon)
-      pkg ensure chat/bitlbee
-      ;;
+    Darwin) brew install bitlbee ;;
+    *)      pkg ensure chat/bitlbee ;;
   esac
 }
 
